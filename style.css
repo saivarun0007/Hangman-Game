@@ -33,7 +33,7 @@ header{
     margin: auto;
     height: 564px;
     width: calc(3344px / 8);
-    background-image: url(images/spritesheet.png);
+    background-image: url(./images/spritesheet.png);
     animation: hangmanAnimation 1s steps(8) infinite;
 }
 

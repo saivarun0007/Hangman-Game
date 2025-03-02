@@ -169,7 +169,8 @@ async function checkIfWon(word) {
 async function fetchData() {
     const options = { method: 'GET' };
     try {
-        const response = await fetch('https://random-word-api.vercel.app/api?words=1', options);
+        const response = await fetch('https://random-word-api.vercel.app/api?words=1');
+
         const record = await response.json();
         const word = record[0];
 
