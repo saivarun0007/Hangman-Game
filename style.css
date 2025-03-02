@@ -1,0 +1,218 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(black, brown);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header{
+    background-color: black;
+    color: white;
+    font-family: 'Russo One', sans-serif;
+    text-align: center;
+    font-size: 70px;
+}
+
+#wordDefinitionParagraph{
+    font-family: 'Russo One', sans-serif;
+    display: none;
+    position: absolute;
+    left: calc(50% - 180px);
+    width: 360px;
+    border-style: solid;
+    border-radius: 4px;
+    text-align: center;
+    border-color:black;
+    color: white;
+    background-color: brown;
+}
+
+#hangstandHangman{
+    display: none;
+    margin: auto;
+    height: 564px;
+    width: calc(3344px / 8);
+    background-image: url(images/spritesheet.png);
+    animation: hangmanAnimation 1s steps(8) infinite;
+}
+
+@keyframes hangmanAnimation {
+    100% { background-position: -3344px; }
+  }
+
+#guessedWords{
+    display: none;
+    margin: 5px;
+    color: green;
+    font-family: 'Russo One', sans-serif;
+}
+footer{
+    background-repeat: no-repeat;
+    background-position: bottom 0px right 0px;
+}
+
+#game-container{
+    position: relative;
+    display: block;
+    margin: auto;
+    border-style: outset;
+    border-width: 4px;
+    border-radius: 4px;
+    background-color: white;
+    height: 680px;
+    width: 812px;
+    
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+#menu-buttons{
+    position: absolute;
+    top: calc(50% - 69px);
+    left: calc(50% - 129px);
+    
+}
+
+#start-button{
+   
+    color:black;
+    background-color: gainsboro;
+    font-family: 'Rubik Mono One', sans-serif;
+    font-size: 40px;
+    margin: auto;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    display: block;
+   
+}
+
+#options-button{
+    color:black;
+    background-color: gainsboro;
+    font-family: 'Rubik Mono One', sans-serif;
+    font-size: 40px;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    display: block;
+    margin: auto;
+    
+}
+
+#retry{
+    color:black;
+    background-color: gainsboro;
+    font-size: 18px;
+    font-family: 'Russo One', sans-serif;
+    height: 40px;
+    border: none;
+    border-radius: 6px;
+    display: block;
+    margin: auto;
+}
+
+#load{
+    width: 320px;
+    height: 220px;
+    display: none;
+    position: absolute;
+    top: calc(50% - 110px);
+    left: calc(50% - 160px);
+    text-align: center;
+    font-family: 'Russo One', sans-serif;
+    font-size: 60px;
+}
+
+#game-over{
+    position: absolute;
+    color: white;
+    background-color:brown;
+    top: calc(50% - 108px);
+    left: calc(50% - 143px);
+    height: 210px;
+    width: 280px;
+    display: none;
+    border-color: black;
+    border-style: solid;
+    border-radius: 3px;
+    text-align: center;
+    z-index: 1;
+    font-family: 'Russo One', sans-serif;
+}
+
+#options{
+    position: absolute;
+    background-color:brown;
+    top: calc(50% - 117.5px);
+    left: calc(50% - 175px);
+    display: none;
+    margin: auto;
+    width: 350px;
+    height: 235px;
+    border: solid;
+    border-radius: 3px;
+    text-align: center;
+    z-index: 1;
+    font-family: 'Russo One', sans-serif;
+}
+
+#exitOptions{
+    position: absolute;
+    right: 0px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 3px;
+}
+
+#wordWas{
+    color:gold;
+    font-weight:bold;
+}
+
+#guessedWordCount{
+    display: none;
+    color: lawngreen;
+    font-weight:bold;
+}
+
+#letterFields{
+    display: block;
+    width: 810px;
+    margin: auto;
+    text-align: center;
+}
+
+@media screen and (width: 810px),(width: 428px),(width: 414px),(width: 412px),(width: 393px), (width: 390px), (width: 384px), (width: 375px), (width: 360px){
+    #game-container {
+        width: 96%;
+        
+    }
+
+    #letterFields{
+        max-width: 96%;
+        
+    }
+
+    #hangstandHangman{
+        transform: scale(0.70, 0.75);
+        
+    }
+    
+
+}
+
+@media screen and (width: 360px){
+
+    #hangstandHangman{
+        transform: scale(0.65, 0.70);
+        
+    }
+    
+
+}
+

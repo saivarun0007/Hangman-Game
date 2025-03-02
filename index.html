@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
+    <title>Hangman Game</title>
+</head>
+<body>
+<header>Hangman</header>
+
+<div id="game-container">
+    <p id="load">Loading...</p>
+    <div id="menu-buttons">
+    <button id="start-button">Start</button>
+    <button id="options-button">Options</button>
+    </div>
+    <p id="wordDefinitionParagraph"></p>
+    <div id="hangstandHangman">
+    </div>
+    <div id="letterFields"></div>
+    <p id="guessedWords">Guessed: </p>
+    <div id="game-over">
+        <h1>Game over !</h1>
+        <h2>The word was: </h2>
+        <p id="wordWas"></p>
+        <p id="guessedWordCount"></p>
+        <button id="retry">Retry</button>
+    </div>
+
+    <div id="options">
+        <button id="exitOptions">&#x2715</button>
+        <h1>Options </h1>
+        <label for="checkboxForDefinitionHints">Turn on definition hints:</label>
+        <input type="checkbox" id="checkboxForDefinitionHints"><br>
+        <label for="volumeRange">Sound volume:</label>
+        <input type="range" min="1" max="100" value="50" id="volumeRange">
+    </div>
+</div>
+<footer></footer>
+    <script src="index.js"></script>
+</body>
+</html>
